@@ -32,6 +32,7 @@ public class CmmUseMapperTest {
 		// selectCmmCodeDetail2();
 		// selectCmmCodeDetail3();
 		// selectCmmCodeDetail4();
+
 	}
 
 	public void selectCmmCodeDetail() throws Exception {
