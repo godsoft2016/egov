@@ -3,7 +3,7 @@
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.2.xsd">
 
-	<bean class="org.mybatis.spring.SqlSessionFactoryBean" id="sqlSession">
+	<bean id="sqlSession" class="org.mybatis.spring.SqlSessionFactoryBean">
 		<property name="configLocation"
 			value="classpath:godsoft/mapper/config/${Globals.DbType}/mybatis-3-config.xml" />
 
@@ -13,9 +13,9 @@
 		<property name="dataSource" ref="dataSource" />
 	</bean>
 
-	<!-- <bean class="org.mybatis.spring.mapper.MapperScannerConfigurer"> -->
-	<!-- <property name="basePackage" value="godsoft.com.**.mapper" /> -->
-	<!-- </bean> -->
+	<bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
+		<property name="basePackage" value="godsoft.com.**.mapper" />
+	</bean>
 
 	<bean class="egovframework.rte.psl.dataaccess.mapper.MapperConfigurer">
 		<property name="basePackage" value="godsoft.com.**.service.impl" />

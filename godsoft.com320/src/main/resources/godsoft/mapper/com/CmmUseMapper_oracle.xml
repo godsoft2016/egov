@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="godsoft.com.mapper.GodsoftCom0101Mapper">
+
+	<select id="selectCmmCodeDetail" parameterType="egovframework.com.cmm.ComDefaultCodeVO"
+		resultType="egovframework.com.cmm.service.CmmnDetailCode">
+<![CDATA[ 
+select 
+	CODE_ID as codeId
+	, CODE
+	, CODE_NM as codeNm
+	, CODE_DC as codeDc
+from COMTCCMMNDETAILCODE
+WHERE 1 = 1
+	and USE_AT = 'Y'
+	and CODE_ID = #{codeId}
+order by
+	CODE_DC
+]]>
+	</select>
+
+	<select id="selectCmmCodeDetail2" parameterType="comDefaultCodeVO"
+		resultType="cmmnDetailCode">
+<![CDATA[ 
+select 
+	CODE_ID as codeId
+	, CODE
+	, CODE_NM as codeNm
+	, CODE_DC as codeDc
+from COMTCCMMNDETAILCODE
+WHERE 1 = 1
+	and USE_AT = 'Y'
+	and CODE_ID = #{codeId}
+order by
+	CODE_DC
+]]>
+	</select>
+
+	<select id="selectCmmCodeDetail3" parameterType="comDefaultCodeVO"
+		resultType="egovframework.rte.psl.dataaccess.util.EgovMap">
+<![CDATA[ 
+select 
+	CODE_ID
+	, CODE
+	, CODE_NM
+	, CODE_DC
+from COMTCCMMNDETAILCODE
+WHERE 1 = 1
+	and USE_AT = 'Y'
+	and CODE_ID = #{codeId}
+order by
+	CODE_DC
+]]>
+	</select>
+
+	<select id="selectCmmCodeDetail4" parameterType="comDefaultCodeVO"
+		resultType="egovMap">
+<![CDATA[ 
+select 
+	CODE_ID
+	, CODE
+	, CODE_NM
+	, CODE_DC
+from COMTCCMMNDETAILCODE
+WHERE 1 = 1
+	and USE_AT = 'Y'
+	and CODE_ID = #{codeId}
+order by
+	CODE_DC
+]]>
+	</select>
+
+</mapper>
