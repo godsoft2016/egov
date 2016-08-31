@@ -33,13 +33,13 @@ public class EgovCmmUseServiceImplTest {
 	public void selectCmmCodeDetails() throws Exception {
 		List<ComDefaultCodeVO> voList = new ArrayList<ComDefaultCodeVO>();
 
-		ComDefaultCodeVO vo = new ComDefaultCodeVO();
-		vo.setCodeId("COM001");
-		voList.add(vo);
+		ComDefaultCodeVO comDefaultCodeVO = new ComDefaultCodeVO();
+		comDefaultCodeVO.setCodeId("COM001");
+		voList.add(comDefaultCodeVO);
 
-		vo = new ComDefaultCodeVO();
-		vo.setCodeId("COM002");
-		voList.add(vo);
+		comDefaultCodeVO = new ComDefaultCodeVO();
+		comDefaultCodeVO.setCodeId("COM002");
+		voList.add(comDefaultCodeVO);
 
 		Map<String, List<CmmnDetailCode>> selectCmmCodeDetails = egovCmmUseService
 				.selectCmmCodeDetails(voList);
@@ -53,8 +53,12 @@ public class EgovCmmUseServiceImplTest {
 			egovLogger.debug("COM002=" + COM002);
 		}
 
-		debug(COM001);
-		debug(COM002);
+		// debug(COM001);
+		// debug(COM002);
+
+		for (String key : selectCmmCodeDetails.keySet()) {
+			debug(selectCmmCodeDetails.get(key));
+		}
 	}
 
 	public void debug(List<CmmnDetailCode> items) throws Exception {
