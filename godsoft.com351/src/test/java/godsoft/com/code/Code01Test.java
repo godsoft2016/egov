@@ -136,8 +136,8 @@ public class Code01Test {
 			sb.append(", '" + c + "'");
 			sb.append(", null");
 			sb.append(", 'Y'");
-			sb.append(", SYSDATE2");
-			sb.append(", 'SYSTEM'");
+			sb.append(", SYSDATE");
+			sb.append(", 'SYSTEM2'");
 			sb.append(", null");
 			sb.append(", null");
 			sb.append(");");
